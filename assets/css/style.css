@@ -69,3 +69,59 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.day-container {
+  margin: 0px 120px 0px 120px;
+}
+
+.hour-container {
+  height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  border-top: 2px solid white;
+}
+.time-text {
+  text-align: right;
+  width: 80%;
+  height: 60%;
+}
+
+.time-box {
+  width: 10%;
+  min-width: 100px;
+  border-style: dotted;
+  border-left: 0px;
+  border-bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.color-box {
+ background-color: grey;
+ height: 100%;
+ width: 80%;
+ min-width: 100px;
+ display:flex;
+ align-items: center;
+}
+
+.planner-text {
+  height: 70%;
+  padding-left: 14px;
+}
+.save-box {
+  background-color: blue;
+  width: 10%;
+  min-width: 100px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.save-button {
+  width: 100%;
+  text-align: center;
+  color:white;
+}
