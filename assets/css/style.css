@@ -55,10 +55,6 @@ textarea{
 }
 
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
 
 .day-container {
   margin: 0px 120px 0px 120px;
@@ -109,10 +105,23 @@ textarea{
   border-left: 1px solid black;
   background-color: #06AED5;
   color: white;
+  transition: all .3s ease-in-out;
 }
 
 .save-button {
   width: 100%;
+  font-size: 20px;
   text-align: center;
   color:white;
+  transition: all .3s ease-in-out;
+}
+
+.save-box:hover > .save-button{
+  font-size: 25px;
+  color:black;
+}
+
+.save-box:active > .save-button{
+  transition: all 0s;
+  color:#77dd77;
 }
