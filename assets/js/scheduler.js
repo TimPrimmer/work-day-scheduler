@@ -28,11 +28,24 @@ var dateAndColor = function () {
     tempTime.add(1, 'hours'); // adding time to our temp time
     tempTime2.add(1, 'hours');
   }
+  loadTasks();
 }
 
 var saveTasks = function () {
+  var tempTasks = [];
   for (x = 0; x < colorBoxes.length; x++) {
-    console.log(colorBoxes[x].textContent);
+    tempTasks.push(colorBoxes[x].textContent);
+  }
+  localStorage.setItem("tasks", tempTasks);
+}
+
+var loadTasks = function () {
+  var tempTasks = [];
+  if (localStorage.getItem("tasks")){
+    tempTasks = localStorage.getItem("tasks").split(","); // turns the string we saved back into an array **BUG**
+  }
+  for (x = 0; x < colorBoxes.length; x++) {
+    colorBoxes[x].textContent = tempTasks[x];
   }
 }
 
