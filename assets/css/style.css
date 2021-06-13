@@ -57,11 +57,11 @@ textarea{
 
 
 .day-container {
-  margin: 0px 120px 0px 120px;
+  margin: 0px 120px 10px 120px;
 }
 
 .hour-container {
-  height: 100px;
+  height: 75px; /** determines the size of the boxes**/
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
@@ -74,8 +74,8 @@ textarea{
 }
 
 .time-box {
-  width: 10%;
-  min-width: 100px;
+  width: 100px;
+  min-width: 75px;
   border-style: dotted;
   border-left: 0px;
   border-bottom: 0px;
@@ -84,20 +84,22 @@ textarea{
 }
 
 .color-box {
+  font-size: 20px;
   height: 100%;
   width: 80%;
   min-width: 100px;
   text-align: left;
   vertical-align: top;
-  padding-left: 15px;
-  padding-top: 15px;
-  line-height: 15px;
+  padding-left: 10px;
+  padding-top: 10px;
+  line-height: 1;
   white-space: break-spaces;
+  overflow: auto;
 }
 
 .save-box {
-  width: 10%;
-  min-width: 100px;
+  width: 75px;
+  min-width: 75px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
@@ -117,11 +119,61 @@ textarea{
 }
 
 .save-box:hover > .save-button{
-  font-size: 25px;
   color:black;
 }
 
-.save-box:active > .save-button{
+.save-box:active{
   transition: all 0s;
-  color:#77dd77;
+  background-color:#77dd77;
 }
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  .color-box {
+    font-size: 15px;
+  }
+  .day-container {
+    margin: 0px 90px 10px 90px;
+  }
+  .display-3 { /** affects the main header text **/
+    font-size: 4rem;
+  }
+  .jumbotron {
+    padding: 50px 32px 50px 32px;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  .color-box {
+    font-size: 13px;
+  }
+  .day-container {
+    margin: 0px 60px 10px 60px;
+  }
+  .display-3 { /** affects the main header text **/
+    font-size: 3rem;
+  }
+  .jumbotron {
+    padding: 32px 32px 32px 32px;
+  }
+  
+}
+
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .day-container {
+    margin: 0px 30px 10px 30px;
+  }
+  .display-3 { /** affects the main header text **/
+    font-size: 2rem;
+  }
+  .jumbotron {
+    padding: 15px 15px 15px 15px;
+  }
+  .lead { /** affects the main sub-header text **/
+    font-size: 1rem;
+  }
+}
+

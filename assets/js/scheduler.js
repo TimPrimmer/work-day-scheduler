@@ -46,7 +46,15 @@ var saveTasks = function (element) {
   if (element) { // checking if we pass in a parameter/hour
     for (b = 0; b < keyList.length; b++) {
       if (element === keyList[b].hour) {
-        tempTasks[keyList[b].index] = colorBoxes[keyList[b].index].textContent;
+        if (colorBoxes[keyList[b].index].textContent.length > 200) // Making sure the user cant enter in a giant message
+        {
+          alert("Task too long - please edit the task to be 200 chars or less");
+          loadTasks(); // resets the board to the last saved state
+          return;
+        }
+        else {
+          tempTasks[keyList[b].index] = colorBoxes[keyList[b].index].textContent;
+        }
       }
     }
   }
