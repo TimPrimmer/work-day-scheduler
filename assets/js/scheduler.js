@@ -98,4 +98,3 @@ $(".save-box").click(function (event) { // triggers when we click on the save bu
 });
 
 dateAndColor();
-
